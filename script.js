@@ -1,25 +1,29 @@
-const ctx1 = document.getElementById('chart1');
+const chart1 = document.getElementById('chart1');
 
-new Chart(ctx1, {
+new Chart(chart1, {
     type: 'bar',
     data: {
-        labels: ['Hiring Speed', 'Cost Reduction', 'Accuracy', 'Employee Insights'],
+        labels: ['Resume Screening Time Reduced', 'Hiring Efficiency Increase', 'Cost Reduction', 'Employee Insight Improvement'],
         datasets: [{
-            label: 'Impact of AI (%)',
-            data: [80, 70, 85, 75]
+            label: '% Improvement',
+            data: [50, 40, 30, 60]
         }]
+    },
+    options: {
+        plugins: {
+            legend: { display: false }
+        }
     }
 });
 
-const ctx2 = document.getElementById('chart2');
+const chart2 = document.getElementById('chart2');
 
-new Chart(ctx2, {
-    type: 'pie',
+new Chart(chart2, {
+    type: 'doughnut',
     data: {
-        labels: ['Recruitment', 'Payroll', 'Analytics', 'Employee Engagement'],
+        labels: ['Recruitment', 'Payroll Automation', 'Analytics', 'Employee Engagement'],
         datasets: [{
-            data: [35, 20, 25, 20]
+            data: [40, 20, 25, 15]
         }]
     }
 });
-
